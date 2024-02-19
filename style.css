@@ -1,0 +1,20 @@
+:root {
+    box-sizing: border-box;
+}
+
+.cardContainer {
+    display: grid;
+    grid-template: repeat(5, 250px) / repeat(5, 300px);
+    gap: 15px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid black;
+    /* width: 200px; */
+}

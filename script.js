@@ -1,4 +1,4 @@
-const card = document.querySelector('.card')
+const cardContainer = document.querySelector('.cardContainer')
 
 
 const myLibrary = [];
@@ -13,26 +13,28 @@ function Book (author, title, pages, status) {
 
 function addBookToLibrary (newBook) {
     myLibrary.push (newBook);
-    myLibrary.forEach(book => {
-        console.log(book.read);
-    });
-    myLibrary.forEach(book => {
-        for (const key in book) {
-            let item = document.createElement('div');
-            card.appendChild(item);
-            item.classList.add (key);
-            item.textContent = key + ': ' + book[key];
-            if (item.textContent == 'Read: Yes') {
-                item.classList.add ('yes')
-            } else if (item.textContent == 'Read: No' || 'Read: no') {
-                item.classList.add ('no')
-            }
+    let newCard = document.createElement ('div');
+    newCard.classList.add('card')
+    cardContainer.appendChild(newCard)
+    for (const key in newBook) {
+        let item = document.createElement('div');
+        newCard.appendChild(item);
+        item.classList.add (key); 
+        item.textContent = key + ': ' + newBook[key];
+        if (item.textContent == 'Read: Yes') {
+            item.classList.add ('yes');
+        } else if (item.textContent == 'Read: No' || 'Read: no') {
+            item.classList.add ('no');
         };
-    });
-}
+    };
+};
+
+test:
+var long = new Book("The Persecution and Assassination of Jean-Paul Marat as Performed by the Inmates of the Asylum of Charenton Under the Direction of the Marquis de Sade", "Peter Weiss ", "896 pages", "not read yet");
+var dune = new Book("Dune", "Frank Herbert", "896 pages", "not read yet");
+var theHobbit = new Book("The Hobbsit", "J.R.R. Tolkien", "295 pages", "not read yet");
 
 
-
-const theHobbit = new Book ('J.R.R Tolkien', 'The Hobbit', '295 pages', 'No');
+// const theHobbit = new Book ('J.R.R Tolkien', 'The Hobbit', '295 pages', 'No');
 
 
