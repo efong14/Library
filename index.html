@@ -9,7 +9,31 @@
 </head>
 <body>
     <h1>Library</h1>
+    <button class="openModal">Add Book</button>
+    <dialog>
+        <form action="" method="dialog">
+            <div>
+                <label for="author">Author:</label>
+                <input type="text" id="author">
+            </div>
+            <div>
+                <label for="title">Title:</label>
+                <input type="text" id="title">
+            </div>
+            <div>
+                <label for="pages">Pages:</label>
+                <input type="text" id="pages">
+            </div>
+            <div>
+                <input type="radio" id="yes" value="Yes" name="read" checked>
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" value="No" name="read">
+                <label for="no">No</label>
+            </div>
+            <button class="submit">Submit</button>
+            <button class="cancel">Cancel</button>
+        </form>
+    </dialog>
     <div class="cardContainer"></div>
-
 </body>
 </html>

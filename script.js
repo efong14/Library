@@ -1,4 +1,14 @@
-const cardContainer = document.querySelector('.cardContainer')
+const cardContainer = document.querySelector('.cardContainer');
+const dialog = document.querySelector('dialog');
+const openModal = document.querySelector('.openModal');
+const submit = document.querySelector('.submit');
+const cancel = document.querySelector('.cancel');
+const radio = document.querySelector ('input[name=read]:checked');
+const authorIn = document.getElementById ('author');
+const titleIn = document.getElementById ('title');
+const pagesIn = document.getElementById ('pages');
+
+
 
 
 const myLibrary = [];
@@ -29,12 +39,23 @@ function addBookToLibrary (newBook) {
     };
 };
 
-test:
-var long = new Book("The Persecution and Assassination of Jean-Paul Marat as Performed by the Inmates of the Asylum of Charenton Under the Direction of the Marquis de Sade", "Peter Weiss ", "896 pages", "not read yet");
-var dune = new Book("Dune", "Frank Herbert", "896 pages", "not read yet");
-var theHobbit = new Book("The Hobbsit", "J.R.R. Tolkien", "295 pages", "not read yet");
+openModal.addEventListener('click', () => {
+    dialog.showModal();
+});
+
+submit.addEventListener('click', (e) => {
+    // e.preventDefault();
+    // dialog.close()
+    new Book (authorIn.value, titleIn.value, pagesIn.value, radio.value);
+})
 
 
-// const theHobbit = new Book ('J.R.R Tolkien', 'The Hobbit', '295 pages', 'No');
+// test:
+var long = new Book("Peter Weiss ", "The Persecution and Assassination of Jean-Paul Marat as Performed by the Inmates of the Asylum of Charenton Under the Direction of the Marquis de Sade", "896 pages", "No");
+var dune = new Book("Frank Herbert", "Dune", "896 pages", "No");
+var theHobbit = new Book("J.R.R. Tolkien", "The Hobbsit", "295 pages", "No");
+
+
+
 
 
