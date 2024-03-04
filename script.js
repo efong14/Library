@@ -58,6 +58,7 @@ function displayEntry (newCard, itemClass, itemContent) {
 function readBtn (newCard, newBook) {
     let toggleRead = document.createElement ('button');
     toggleRead.classList.add('Read')
+    toggleRead.classList.add(newBook.Read);
     toggleRead.textContent = 'Read: ' + newBook.Read;
     newCard.appendChild(toggleRead);
     toggleRead.addEventListener('click', () => {

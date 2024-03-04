@@ -1,11 +1,70 @@
+@font-face {
+    font-family: typewriter;
+    src: url('Font/JMH\ Typewriter.ttf');
+}
+
 :root {
     box-sizing: border-box;
+    font-family: typewriter;
+    color: #675D50;
+    background-color: #F9F5E7;
+}
+
+button {
+    font-family: typewriter;
+    background-color: #B8621B;
+    color: white;
+    border-style: none;
+    border-radius: 15px;
+    height: 30px;
+    width: 300px;
+}
+
+.openModal {
+    height: 30px;
+    width: 30px;
+    margin-bottom: 30px;
+}
+
+dialog {
+    background-color: #F9F5E7;
+}
+
+form > div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+}
+
+label {
+    width: 50px;
+}
+
+input[type=text], input[type=number] {
+    font-family: typewriter;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 400px;
+    height: 30px;
+    margin: 15px;
+}
+
+input:focus {
+    border: 1px solid #B8621B;
+}
+
+form > div:nth-child(4) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
 }
 
 .cardContainer {
     display: grid;
-    grid-template: repeat(5, 250px) / repeat(5, 300px);
-    gap: 15px;
+    grid-template: repeat(5, 300px) / repeat(5, 1fr);
+    gap: 5px;
 }
 
 .card {
@@ -16,5 +75,15 @@
     padding-left: 10px;
     padding-right: 10px;
     border: 1px solid black;
-    /* width: 200px; */
+}
+
+
+.Yes {
+    background-color: #43766C;
+    color: white;
+}
+
+.No {
+    background-color: #884A39;
+    color: white;
 }
